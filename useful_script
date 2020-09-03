@@ -1,2 +1,5 @@
 # 递归生成目录中全部文件的MD5码
 find ./ -type f -print0 | xargs -0 md5sum
+
+# 批量替换目录下所有文件内容
+sed -i "s/oldString/newString/g"  `grep oldString -rl .`
