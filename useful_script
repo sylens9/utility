@@ -3,3 +3,9 @@ find ./ -type f -print0 | xargs -0 md5sum
 
 # 批量替换目录下所有文件内容
 sed -i "s/oldString/newString/g"  `grep oldString -rl .`
+
+# 离线安装python库
+# 在线主机：
+pip download xxx
+# 离线主机：
+pip install --no-index --find-links=file:/path/to/package xxx
