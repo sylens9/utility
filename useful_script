@@ -4,6 +4,12 @@ find ./ -type f -print0 | xargs -0 md5sum
 # 批量替换目录下所有文件内容
 sed -i "s/oldString/newString/g"  `grep oldString -rl .`
 
+# 离线安装yum包
+# 在线主机：
+sudo yum install --downloadonly --downloaddir=/tmp <package-name>
+# 离线主机：
+sudo yum install xxx.rpm
+
 # 离线安装python库
 # 在线主机：
 pip download xxx
