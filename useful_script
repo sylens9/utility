@@ -12,6 +12,6 @@ sudo yum install xxx.rpm
 
 # 离线安装python库
 # 在线主机：
-pip download xxx
+pip download --trusted-host pypi.python.org --trusted-host pypi.org --trusted-host files.pythonhosted.org xxx
 # 离线主机：
 pip install --no-index --find-links=file:/path/to/package xxx
